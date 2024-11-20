@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "mysql-project"
+version = "0.1.0"
+description = ""
+authors = ["longtongster <sacha.van.weeren@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+jupyterlab = "^4.3.1"
+requests = "^2.32.3"
+sqlalchemy = "^2.0.36"
+pymysql = {extras = ["rsa"], version = "^1.1.1"}
+cryptography = "^43.0.3"
+pandas = "^2.2.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
