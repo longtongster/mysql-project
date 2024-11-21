@@ -11,3 +11,8 @@ data:
         name VARCHAR(100) NOT NULL,
         age INT NOT NULL
     );
+    INSERT INTO person(name, age)
+    VALUES ('Casper', '17'),
+    ('Daan', '19'),
+    ('Sacha','54'),
+    ('Marjet';'50')

@@ -7,6 +7,6 @@ spec:
   selector:
     app: mysql
   ports:
-    - port: 3306       # MySQL default port
-      targetPort: 3306
-      nodePort: 30081
+    - port: 3306        # host port
+      targetPort: 3306  # Container port
+      nodePort: 30081   # kubernetes nodeport external access
