@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: phpmyadmin
+spec:
+  type: NodePort  # Use NodePort if you're running on Minikube
+  selector:
+    app: phpmyadmin
+  ports:
+    - port: 80        # Exposed port
+      targetPort: 80  # Exposed port on container
+      nodePort: 30080 # Exposed port on the control plane node (or node that the container runs on)
