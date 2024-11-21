@@ -4,16 +4,26 @@ version = "0.1.0"
 description = ""
 authors = ["longtongster <sacha.van.weeren@gmail.com>"]
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.10"
 jupyterlab = "^4.3.1"
-requests = "^2.32.3"
 sqlalchemy = "^2.0.36"
 pymysql = {extras = ["rsa"], version = "^1.1.1"}
 cryptography = "^43.0.3"
 pandas = "^2.2.3"
+requests = "^2.32.3"
+mysqlclient = {version = "^2.2.6", optional = true}
 
+[tool.poetry.extras]
+databases = ["mysqlclient"]
+
+[tools.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.10.0"
 
 [build-system]
 requires = ["poetry-core"]
